@@ -1,0 +1,21 @@
+body{
+  background-color: antiquewhite;
+}
+p{
+  color: rgb(181, 167, 151);
+}
+a {
+  font-size: large;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    background-color: rgb(226, 229, 217);
+  }
+  p {
+    color: rgb(172, 172, 119);
+  }
+  #aBtn{
+    width:100%;
+  }
+}
