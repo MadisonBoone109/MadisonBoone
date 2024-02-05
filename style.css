@@ -1,21 +1,116 @@
-body{
-  background-color: antiquewhite;
+.background{
+  top: 0;
+  z-index: -2;
+  width:100%;
+  height: 100vh;
+  position: fixed;
 }
-p{
-  color: rgb(181, 167, 151);
+@media screen and (max-width: 1000px){
+  .background{
+  width: auto;
+  }
 }
-a {
-  font-size: large;
+/* -NAV- */
+.topnav {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.84);
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
 }
 
-@media screen and (max-width: 900px) {
-  body {
-    background-color: rgb(226, 229, 217);
-  }
-  p {
-    color: rgb(172, 172, 119);
-  }
-  #aBtn{
-    width:100%;
+/* Links inside the navbar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a.active {
+  
+    color: rgb(244, 240, 236);
+    font-weight: bold;
+    font-size: 24px;
+    z-index: 100;
+    padding: 10px;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .topnav.responsive {position: fixed;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+  
+/* -HEADING- */
+.head {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+section{
+  width: 100%;
+  padding: 5%;
+  margin-left: 0;
+  margin-right: 0;
+}
+.white{
+  background-color: #f2f2f2;
+  color: black;
+}
+
+.black{
+  background-color: black;
+  color: white;
+}
+
+
+
+/***********footer************/
+footer {
+  bottom: 0;
+  margin-bottom: 0;
+  background-color: black;
+  padding: 30px;
+}
+
+.FooterLinks {
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  .FooterLinks {
+    font-size: 16px;
+  }
+  } 
