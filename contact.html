@@ -22,21 +22,21 @@
 </head>
 <body>
 <!--NAV BAR-->
-<div class="topnav" id="myTopnav">
-  <a class="nav-link active" href="#">Madison Boone</a>
-  <a class="nav-link" href="index.html">Home</a>
-  <a class="nav-link" href="portfolio.html">My Portfolio</a>
-  <a class="nav-link" href="contact.html">Contact</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
+<div id="navbar"></div>
+
+<script>
+  fetch("Components/navbar.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("navbar").innerHTML = data;
+    });
+</script>
 
 <!--Background image-->
-<img src="imgs/COVEharbour.jpg" class="background" alt="background">
+<img src="imgs/hfxwaterfront.jpg" class="background" alt="background">
 
 <!--Header-->
-<div class="text-white text-center" style="margin: 100px;">
+<div class="text-white text-center" style="margin: 120px 0px;">
   <h1>Contact Me</h1>
   <div class="socials">
     <a href="https://www.linkedin.com/in/mboone109/" data-bs-toggle="tooltip" title="LinkedIn"><img src="imgs/linkedin.png" height="25px"></a>
@@ -44,7 +44,7 @@
   </div>
 </div>
 
-<section class="black">
+<section style="background-color: #adc8e3f0;">
   <form action="listMessages.php" method="POST">
     <div class="form-group">
       <label for="name">Name:</label>

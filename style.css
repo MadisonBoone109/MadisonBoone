@@ -10,10 +10,18 @@
   width: auto;
   }
 }
+
+.parisienne-regular {
+  font-family: "Parisienne", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+}
+
 /* -NAV- */
 .topnav {
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.84);
+  background-color: #a4c9eef0;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
@@ -68,7 +76,7 @@
   
 /* -HEADING- */
 .head {
-  min-height: 100vh;
+  min-height: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
