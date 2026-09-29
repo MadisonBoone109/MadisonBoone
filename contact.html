@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en" data-bs-theme="light">
+
 <head>
   <title>Contact Me</title>
   <meta charset="utf-8">
@@ -7,71 +8,76 @@
   <!--my stylesheet-->
   <link href="style.css" rel="stylesheet">
   <!--favicon-->
-  <link rel="icon" type="image/png" href="favicon_io (1)/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="favicon_io/favicon-32x32.png" sizes="32x32">
   <!--w3s responsive nav(menu)-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!--w3s bootstrap 5-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <style>
-    body{
+    body {
       background-color: black;
     }
   </style>
   <script src="script.js" defer></script>
 </head>
+
 <body>
-<!--NAV BAR-->
-<div id="navbar"></div>
+  <!--NAV BAR-->
+  <div id="navbar"></div>
 
-<script>
-  fetch("Components/navbar.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("navbar").innerHTML = data;
-    });
-</script>
+  <script>
+    fetch("Components/navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+      });
+  </script>
 
-<!--Background image-->
-<img src="imgs/hfxwaterfront.jpg" class="background" alt="background">
+  <!--Background image-->
+  <img src="imgs/hfxwaterfront.jpg" class="background" alt="background">
 
-<!--Header-->
-<div class="text-white text-center" style="margin: 120px 0px;">
-  <h1>Contact Me</h1>
-  <div class="socials">
-    <a href="https://www.linkedin.com/in/mboone109/" data-bs-toggle="tooltip" title="LinkedIn"><img src="imgs/linkedin.png" height="25px"></a>
-    <a href="mailto:madisonboone109@gmail.com" data-track-event="click" data-track-action="email_link" data-bs-toggle="tooltip" title="GMail"><img src="imgs/gmail.png" height="25px"></a>
-  </div>
-</div>
-
-<section style="background-color: #adc8e3f0;">
-  <form action="listMessages.php" method="POST">
-    <div class="form-group">
-      <label for="name">Name:</label>
-      <input type="text" class="form-control" id="name" name="name" required>
+  <!--Header-->
+  <div class="text-white text-center" style="margin: 120px 0px;">
+    <h1>Contact Me</h1>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/mboone109/" data-bs-toggle="tooltip" title="LinkedIn"><img
+          src="imgs/linkedin.png" height="25px"></a>
+      <a href="mailto:madisonboone109@gmail.com" data-track-event="click" data-track-action="email_link"
+        data-bs-toggle="tooltip" title="GMail"><img src="imgs/gmail.png" height="25px"></a>
     </div>
-    <div class="form-group">
-        <label for="message">Message:</label>
-        <textarea class="form-control" id="message" name="message" 
-        rows="2" cols="50" required></textarea>
+  </div>
+
+  <section style="background-color: #adc8e3f0;">
+    <form action="listMessages.php" method="POST">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" required>
       </div>
-    <div class="form-group">
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea class="form-control" id="message" name="message" rows="2" cols="50" required></textarea>
+      </div>
+      <div class="form-group">
         <label for="email">Email address:</label>
         <input type="email" class="form-control" id="email" name="email">
       </div>
-    <button type="submit" value="Submit" class="btn btn-default">Submit</button>
-  </form>
-</section>
+      <button type="submit" value="Submit" class="btn btn-default">Submit</button>
+    </form>
+  </section>
 
   <footer>
     <a class="FooterLinks" href="contact.html">Contact Me</a>
     <a class="FooterLinks" href="portfolio.html">My Portfolio</a>
-    <a class="FooterLinks" href="https://github.com/W04S6871822" data-bs-toggle="tooltip" title="GitHub"><img src="imgs/github.png" height="25px"></a>
-    <a class="FooterLinks" href="https://www.linkedin.com/in/mboone109/" data-bs-toggle="tooltip" title="LinkedIn"><img src="imgs/linkedin.png" height="25px"></a>
-    <a class="FooterLinks" href="mailto:madisonboone109@gmail.com" data-track-event="click" data-track-action="email_link" data-bs-toggle="tooltip" title="GMail"><img src="imgs/gmail.png" height="25px"></a>
+    <a class="FooterLinks" href="https://github.com/W04S6871822" data-bs-toggle="tooltip" title="GitHub"><img
+        src="imgs/github.png" height="25px"></a>
+    <a class="FooterLinks" href="https://www.linkedin.com/in/mboone109/" data-bs-toggle="tooltip" title="LinkedIn"><img
+        src="imgs/linkedin.png" height="25px"></a>
+    <a class="FooterLinks" href="mailto:madisonboone109@gmail.com" data-track-event="click"
+      data-track-action="email_link" data-bs-toggle="tooltip" title="GMail"><img src="imgs/gmail.png" height="25px"></a>
   </footer>
-  
-  
+
+
   <script>
     //hamburger menu in nav
     function myFunction() {
@@ -82,13 +88,14 @@
         x.className = "topnav";
       }
     }
-  
+
     //tooltip for the socials div
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl)
+      return new bootstrap.Tooltip(tooltipTriggerEl)
     })
-    </script>
+  </script>
 
 </body>
+
 </html>
