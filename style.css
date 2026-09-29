@@ -18,6 +18,13 @@
   font-size: 60px;
 }
 
+.playfair-display-regular {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* -NAV- */
 .topnav {
   overflow: hidden;
